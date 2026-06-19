@@ -1,12 +1,48 @@
-import headshotPlaceholder from "../assets/headshot-placeholder.jpg";
+import { useEffect, useState } from "react";
+import headshotPlaceholder from "../assets/image.jpeg";
 
 const links = {
   linkedin: "https://www.linkedin.com/in/roydon-tay/",
   github: "https://github.com/RoydonTay",
 };
 
+const roles = ["AI Engineer", "ML Engineer", "Researcher"];
+
+function useTypewriter(words) {
+  const [wordIndex, setWordIndex] = useState(0);
+  const [characterCount, setCharacterCount] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentWord = words[wordIndex];
+    const isComplete = characterCount === currentWord.length;
+    const isEmpty = characterCount === 0;
+    const delay = isComplete && !isDeleting ? 1300 : isDeleting ? 46 : 82;
+
+    const timeout = window.setTimeout(() => {
+      if (isComplete && !isDeleting) {
+        setIsDeleting(true);
+        return;
+      }
+
+      if (isEmpty && isDeleting) {
+        setIsDeleting(false);
+        setWordIndex((index) => (index + 1) % words.length);
+        return;
+      }
+
+      setCharacterCount((count) => count + (isDeleting ? -1 : 1));
+    }, delay);
+
+    return () => window.clearTimeout(timeout);
+  }, [characterCount, isDeleting, wordIndex, words]);
+
+  return words[wordIndex].slice(0, characterCount);
+}
+
 export default function Hero() {
   const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`;
+  const typedRole = useTypewriter(roles);
 
   return (
     <section className="hero section-shell hero--animated" id="top" aria-labelledby="hero-title">
@@ -19,8 +55,11 @@ export default function Hero() {
           Hi, I am <span>Roydon</span>
           <span className="hero-wipe hero-wipe--two" aria-hidden="true" />
         </h1>
-        <div className="hero__role" aria-label="Applied AI and machine learning engineer">
-          <span>Applied AI Builder</span>
+        <div className="hero__role" aria-label={typedRole || roles[0]}>
+          <span className="hero__role-text" aria-hidden="true">
+            {typedRole}
+            <span className="hero__role-cursor" />
+          </span>
           <span className="hero-wipe hero-wipe--three" aria-hidden="true" />
         </div>
         <p className="hero__summary">

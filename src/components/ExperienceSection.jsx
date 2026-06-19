@@ -7,7 +7,7 @@ export default function ExperienceSection() {
     <section className="section-shell" id="experience" aria-labelledby="experience-title">
       <SectionHeader
         eyebrow="Experience"
-        title="Internships across research, recommender systems, and applied AI."
+        title="Internships across research and applied AI."
         id="experience-title"
       />
       <div className="experience-list">

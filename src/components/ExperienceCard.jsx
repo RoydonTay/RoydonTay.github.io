@@ -1,20 +1,19 @@
 import Reveal from "./Reveal.jsx";
 
 export default function ExperienceCard({ experience, delay = 0 }) {
-  const { company, role, period, logo, bullets, tags } = experience;
+  const { company, role, period, bullets, tags } = experience;
 
   return (
     <Reveal as="article" className="experience-card" delay={delay}>
       <div className="experience-card__header">
-        <img src={logo} alt={`${company} logo`} className="experience-card__logo" />
-        <div>
+        <div className="experience-card__titles">
+          <h3>{company}</h3>
+          <span aria-hidden="true">/</span>
           <h3>{role}</h3>
-          <p className="experience-card__meta">
-            <span>{company}</span>
-            <span aria-hidden="true">/</span>
-            <time>{period}</time>
-          </p>
         </div>
+        <p className="experience-card__meta">
+          <time>{period}</time>
+        </p>
       </div>
       <ul className="experience-card__bullets">
         {bullets.map((bullet) => (

@@ -29,7 +29,7 @@ export default function SkillsSection() {
     <section className="section-shell skills-section" id="skills" aria-labelledby="skills-title">
       <SectionHeader
         eyebrow="Skills"
-        title="A compact toolkit for shipping data and AI systems."
+        title="Tools for data science, machine learning, and software engineering."
         id="skills-title"
       />
       <Reveal className="skills-marquee" delay={120} aria-label="Roydon's technical skills">

@@ -1,5 +1,9 @@
 import SectionHeader from "./SectionHeader.jsx";
+import TokenStream from "./TokenStream.jsx";
 import Reveal from "./Reveal.jsx";
+
+const introduction =
+  "I am a Data Science and Analytics undergraduate at the National University of Singapore, with a minor in Computer Science. I enjoy working at the intersection of machine learning, recommender systems, LLM agents, and applied AI. I am especially interested in turning research ideas into practical systems, whether that means building intelligent chatbots, experimenting with ranking models, or designing AI workflows that can be evaluated and improved systematically.";
 
 export default function About() {
   return (
@@ -10,14 +14,7 @@ export default function About() {
         id="about-title"
       />
       <Reveal className="about-card" delay={120}>
-        <p>
-          I am a Data Science and Analytics undergraduate at the National University of Singapore,
-          with a minor in Computer Science. I enjoy working at the intersection of machine learning,
-          recommender systems, LLM agents, and applied AI. I am especially interested in turning
-          research ideas into practical systems, whether that means building intelligent chatbots,
-          experimenting with ranking models, or designing AI workflows that can be evaluated and
-          improved systematically.
-        </p>
+        <TokenStream text={introduction} />
       </Reveal>
     </section>
   );

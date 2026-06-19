@@ -16,7 +16,7 @@ export default function Footer() {
             GitHub / Portfolio
           </a>
         </div>
-        <p className="site-footer__small">© {currentYear} Roydon Tay. Built with React.</p>
+        <p className="site-footer__small">Roydon Tay. Built with React and Codex :)</p>
       </div>
     </footer>
   );

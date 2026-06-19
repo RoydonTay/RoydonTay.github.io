@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Synapxe logo placeholder">
-  <rect width="96" height="96" rx="24" fill="#2563eb"/>
-  <circle cx="31" cy="35" r="8" fill="#dbeafe"/>
-  <circle cx="65" cy="35" r="8" fill="#dbeafe"/>
-  <circle cx="48" cy="63" r="8" fill="#dbeafe"/>
-  <path d="M38 39l20 0M35 42l9 15M61 42l-9 15" stroke="#dbeafe" stroke-width="7" stroke-linecap="round"/>
-</svg>

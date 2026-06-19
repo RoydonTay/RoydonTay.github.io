@@ -6,8 +6,8 @@ export default function ProjectsSection() {
   return (
     <section className="section-shell" id="projects" aria-labelledby="projects-title">
       <SectionHeader
-        eyebrow="Selected Projects"
-        title="Focused builds that connect models, data, and real users."
+        eyebrow="Projects and extra curriculars"
+        title="Relevant projects and programmes."
         id="projects-title"
       />
       <div className="project-grid">
