@@ -5,6 +5,7 @@ export default function Reveal({
   children,
   className = "",
   delay = 0,
+  replay = false,
   ...props
 }) {
   const ref = useRef(null);
@@ -26,7 +27,12 @@ export default function Reveal({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.target);
+
+          if (!replay) {
+            observer.unobserve(entry.target);
+          }
+        } else if (replay) {
+          setIsVisible(false);
         }
       },
       {
@@ -38,7 +44,7 @@ export default function Reveal({
     observer.observe(node);
 
     return () => observer.disconnect();
-  }, []);
+  }, [replay]);
 
   return (
     <Component

@@ -100,7 +100,6 @@ export default function Hero() {
             className="hero__portrait"
           />
         </div>
-        <span className="hero-wipe hero-wipe--image" aria-hidden="true" />
       </div>
     </section>
   );

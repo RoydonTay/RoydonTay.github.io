@@ -4,7 +4,7 @@ export default function ProjectCard({ project, delay = 0 }) {
   const hasLinks = project.links?.github || project.links?.demo;
 
   return (
-    <Reveal as="article" className="project-card" delay={delay}>
+    <Reveal as="article" className="project-card" delay={delay} replay>
       <div>
         <h3>{project.title}</h3>
         <p>{project.description}</p>

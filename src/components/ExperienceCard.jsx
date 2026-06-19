@@ -4,7 +4,7 @@ export default function ExperienceCard({ experience, delay = 0 }) {
   const { company, role, period, bullets, tags } = experience;
 
   return (
-    <Reveal as="article" className="experience-card" delay={delay}>
+    <Reveal as="article" className="experience-card" delay={delay} replay>
       <div className="experience-card__header">
         <div className="experience-card__titles">
           <h3>{company}</h3>
