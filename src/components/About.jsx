@@ -3,7 +3,7 @@ import TokenStream from "./TokenStream.jsx";
 import Reveal from "./Reveal.jsx";
 
 const introduction =
-  "I am a Data Science and Analytics undergraduate at the National University of Singapore, with a minor in Computer Science. I enjoy working at the intersection of machine learning, recommender systems, LLM agents, and applied AI. I am especially interested in turning research ideas into practical systems, whether that means building intelligent chatbots, experimenting with ranking models, or designing AI workflows that can be evaluated and improved systematically.";
+  "I am a Data Science and Analytics undergraduate at the National University of Singapore, with a minor in Computer Science. I enjoy working at the intersection of machine learning, recommender systems, LLM agents, and applied AI. I am especially interested in turning research ideas into practical systems, whether that means building intelligent chatbots, experimenting with ranking models, or designing AI workflows.";
 
 export default function About() {
   return (

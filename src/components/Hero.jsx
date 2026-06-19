@@ -48,7 +48,7 @@ export default function Hero() {
     <section className="hero section-shell hero--animated" id="top" aria-labelledby="hero-title">
       <div className="hero__content">
         <p className="eyebrow hero__eyebrow">
-          Data Science / Applied AI / Product-minded engineering
+          Data Science / ML Engineering / Applied AI / Research
           <span className="hero-wipe hero-wipe--one" aria-hidden="true" />
         </p>
         <h1 id="hero-title">
