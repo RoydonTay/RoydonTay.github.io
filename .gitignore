@@ -3,3 +3,4 @@ dist/
 .pnpm-store/
 .vite-dev*.log
 *.local
+reference/
