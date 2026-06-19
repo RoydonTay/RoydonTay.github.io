@@ -587,7 +587,6 @@ h3 {
   padding-top: 36px;
 }
 
-.about-card,
 .experience-card,
 .project-card {
   border: 1px solid var(--border);
@@ -597,12 +596,11 @@ h3 {
   backdrop-filter: blur(18px);
 }
 
-.about-card {
+.about-text {
   max-width: 920px;
-  padding: clamp(24px, 4vw, 42px);
 }
 
-.about-card p {
+.about-text p {
   margin: 0;
   color: var(--muted);
   font-size: clamp(1rem, 2vw, 1.16rem);
@@ -750,10 +748,6 @@ h3 {
 .skills-marquee__row--right .skills-marquee__track {
   animation-name: skill-marquee-right;
   animation-duration: 30s;
-}
-
-.skills-marquee:hover .skills-marquee__track {
-  animation-play-state: paused;
 }
 
 .skill-bubble {

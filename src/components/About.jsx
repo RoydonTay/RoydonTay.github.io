@@ -13,7 +13,7 @@ export default function About() {
         title="A practical AI builder with a research habit."
         id="about-title"
       />
-      <Reveal className="about-card" delay={120}>
+      <Reveal className="about-text" delay={120}>
         <TokenStream text={introduction} />
       </Reveal>
     </section>
