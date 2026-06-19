@@ -6,6 +6,8 @@ const links = {
 };
 
 export default function Hero() {
+  const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`;
+
   return (
     <section className="hero section-shell" id="top" aria-labelledby="hero-title">
       <div className="hero__content">
@@ -16,7 +18,7 @@ export default function Hero() {
           and data products.
         </p>
         <div className="hero__actions" aria-label="Primary links">
-          <a className="button button--primary" href="/resume.pdf" download>
+          <a className="button button--primary" href={resumeUrl} download>
             Download Resume
           </a>
           <a className="button button--secondary" href={links.linkedin} target="_blank" rel="noreferrer">
